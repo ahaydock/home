@@ -39,8 +39,20 @@ case $OSREL in
     [[ -x /usr/bin/dircolors ]] && /usr/bin/dircolors >/dev/null
     [[ -x ~/.dircolors ]] && ~/.dircolors >/dev/null
     ;;
+  Darwin)
+    export TERM=xterm
+    PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+    export LANG='en_US.utf8'
+    export EDITOR="/usr/local/bin/subl -w"
+    export CLICOLOR=1
+    export LSCOLORS=ExFxBxDxCxegedabagacad
+    ;;
   *);;
 esac
+
+# Export the text editor Sublime
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 # file creation mask is 664
 umask 002
@@ -75,8 +87,7 @@ function tname { echo -en "\033]2;$*\007"; }
 # color prompt for xterm
 case $TERM in
 xterm*)
-  PS1="$(history -a)$(history -n)[\[\033[0;33m\]\$?\[\033[m\]](\t)\[\033[01;34m\]\u@\h\[\033[m\]:\[\033[0;32m\]\w/\[\033[m\]\[\033[0;36m\]\$(git_branch)\[\033[m\]\\$>"
-  tname $(hostname)
+  PS1="$(history -a)$(history -n)(\t)\[\033[01;34m\]\u@\h\[\033[m\]:\[\033[0;32m\]\w/\[\033[m\]\[\033[0;36m\]\$(git_branch)\[\033[m\]\\$>"
   ;;
 *)
   PS1="$(history -a)$(history -n)[\$?](\t)\u@\h:\w\\$>"
@@ -90,6 +101,12 @@ alias egrep='egrep --color=auto'
 
 alias less='less -NMisc'
 alias sudo='sudo '
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias cd..='cd ../'
+alias ~='cd ~'
+alias numfiles='echo $(ls -1 | wc -l)'
 
 # OS dependent aliases
 case $OSREL in
@@ -102,6 +119,13 @@ case $OSREL in
   Linux)
     alias ls='ls -aCF --color=auto'
     alias ll='ls -alhF --color=auto --time-style=long-iso'
+    alias pp='ps axo user,pid,pcpu,pmem,stat,ni,bsdtime,command'
+    alias netstat='netstat -ant'
+  ;;
+  Darwin)
+    alias f='open -a Finder ./'
+    alias ls='ls -aCF'
+    alias ll='ls -alhF'
     alias pp='ps axo user,pid,pcpu,pmem,stat,ni,bsdtime,command'
     alias netstat='netstat -ant'
   ;;
