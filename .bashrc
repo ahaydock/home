@@ -85,14 +85,13 @@ function tname { echo -en "\033]2;$*\007"; }
 # save and load the history on every prompt
 # show last exit code, time, user, hostname, directory, git branch, prompt
 # color prompt for xterm
-case $TERM in
-xterm*)
+
+if [[ "$TERM" == 'xterm' ]] ; then 
   PS1="$(history -a)$(history -n)(\t)\[\033[01;34m\]\u@\h\[\033[m\]:\[\033[0;32m\]\w/\[\033[m\]\[\033[0;36m\]\$(git_branch)\[\033[m\]\\$>"
-  ;;
-*)
-  PS1="$(history -a)$(history -n)[\$?](\t)\u@\h:\w\\$>"
-  ;;
-esac
+else 
+  PS1="$(history -a)$(history -n)(\t)\u@\h:\w\\$>"
+fi
+
 
 #Color grep output
 alias grep='grep --color=auto'
