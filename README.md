@@ -1,7 +1,7 @@
 Bash Evnironment
 ====
 
-Home Bash Environment Happiness
+Home Bash Environment Happiness - Forked from apowers (https://github.com/apowers/home)
 
 *.bashrc* - The workhorse, make your shell happy.
 
@@ -20,12 +20,12 @@ Installation
 Copy each of the adove files to your home directory.
 Relog or 'source .bashrc' and grin.
 
-for F in .bashrc .profile .inputrc .vimrc;do wget --no-check-certificate https://raw.github.com/apowers/home/master/$F -O ~/$F;done
+for F in .bashrc .profile .inputrc .vimrc;do wget --no-check-certificate https://raw.github.com/ahaydock/home/master/$F -O ~/$F;done
 
 Tested on Ubunu, CentOS, and FreeBSD
 
 For full install:
-wget --no-check-certificate https://raw.github.com/apowers/home/master/setup.sh -O ~/setup.sh;sudo sh ~/setup.sh
+wget --no-check-certificate https://raw.github.com/ahaydock/home/master/setup.sh -O ~/setup.sh;sudo sh ~/setup.sh
 
 Features
 ====
@@ -37,10 +37,10 @@ Enables the less pager with some useful features.
 The look of your prompt is a very personal thing for most people.
 This prompt tries to strike a balance between brevity and usefullness.
 
-    [exit-code](HH:MM:SS)user@host:directory/#>
+    (HH:MM:SS)user@host:directory/#>
 
 If you are in a git repository it will show you which branch you are on.
 
-    [0](00:00:00)user@host:directory/{branch}$>
+    (00:00:00)user@host:directory/{branch}$>
 
 Suggestions are welcome.
