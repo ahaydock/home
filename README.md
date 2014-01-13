@@ -7,11 +7,13 @@ Home Bash Environment Happiness - Forked from apowers (https://github.com/apower
 
 *.profile* - Sources .bashrc for login shells.
 
-*.inputrc* - Remaps the up and down arrows to history search,
+*.inputrc* - Remaps the up and down arrows to history search.
 
 *.vimrc* - Configuration file for vim.
 
-*.conkyrc* - Conkey configuration
+*.conkyrc* - Conkey configuration.
+
+*.sublime* - User specific configurations for Sublime Text.
 
 *setup.sh* - Install packages that I like. Ubuntu/Debian only.
 
@@ -33,6 +35,7 @@ Many features not listed here, read the comments.
 Enables emacs style CLI editing.
 Enables the vim editor with many useful features.
 Enables the less pager with some useful features.
+Configures OS X for use with Sublime Text editor.
 
 The look of your prompt is a very personal thing for most people.
 This prompt tries to strike a balance between brevity and usefullness.

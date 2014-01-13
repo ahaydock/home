@@ -7,7 +7,7 @@ XPKGS='synergy geany geany-plugins pidgin pidgin-sipe conky'
 
 # Install dotfiles
 for F in .bashrc .profile .inputrc .vimrc .dircolors ; do
-  wget --no-check-certificate https://raw.github.com/apowers/home/master/$F -O ~/$F
+  wget --no-check-certificate https://raw.github.com/ahaydock/home/master/$F -O ~/$F
 done
 
 # Setup puppet repo
