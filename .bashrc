@@ -86,18 +86,22 @@ function tname { echo -en "\033]2;$*\007"; }
 # show last exit code, time, user, hostname, directory, git branch, prompt
 # color prompt for xterm
 
-if [[ "$TERM" == 'xterm' ]] ; then 
+if [[ "$TERM" == 'xterm' ]] ; then
   PS1="$(history -a)$(history -n)(\t)\[\033[01;34m\]\u@\h\[\033[m\]:\[\033[0;32m\]\w/\[\033[m\]\[\033[0;36m\]\$(git_branch)\[\033[m\]\\$>"
-else 
+else
   PS1="$(history -a)$(history -n)(\t)\u@\h:\w\\$>"
 fi
 
 
-#Color grep output
+# Color grep output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Ruby specific aliases
+alias rspec="rspec --color --format nested"
+
+# Misc. aliases
 alias less='less -NMisc'
 alias sudo='sudo '
 alias cp='cp -iv'
