@@ -1,3 +1,5 @@
+# User settings
+
 {
     "color_scheme": "Packages/Color Scheme - Default/Cobalt.tmTheme",
     "hot_exit":  false,
@@ -5,4 +7,6 @@
     "tab_size":  2,
     "translate_tabs_to_spaces":  true,
     "trim_trailing_white_space_on_save":  true
+    "font_size": 11.0
 }
+
