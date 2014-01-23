@@ -99,7 +99,11 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Ruby specific aliases
-alias rspec="rspec --color --format nested"
+alias rspec='rspec --color --format nested'
+
+# ZFS specific aliases
+alias zlist='zfs list -o dept:id,name,usedbydataset,usedbysnapshots,compressratio'
+alias zsnap='zfs list -t snapshot -o dept:id,name,used,referenced,compressratio'
 
 # Misc. aliases
 alias less='less -NMisc'
