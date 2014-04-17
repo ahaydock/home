@@ -44,6 +44,7 @@ case $OSREL in
     PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
     export LANG='en_US.utf8'
+    export LC_CTYPE="utf-8"
     export EDITOR="/usr/local/bin/subl -w"
     export CLICOLOR=1
     export LSCOLORS=ExFxBxDxCxegedabagacad
