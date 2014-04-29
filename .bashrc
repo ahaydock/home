@@ -77,7 +77,7 @@ shopt -s checkjobs 2>/dev/null
 [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
 function git_branch {
-  [[ -d .git ]] && [[ `git status 2>/dev/null` ]] && echo -n "{$(git status|head -n1|awk '{print $4}')}"
+  [[ -d .git ]] && [[ `git status 2>/dev/null` ]] && echo -n "{$(git status|head -n1|awk '{print $3}')}"
 }
 
 # Set the terminal title with `termname some title`
