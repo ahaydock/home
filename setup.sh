@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # packages
-PKGS='curl git git-flow nmap nmon rubygems tree vagrant vim vim-athena wget sysstat blktrace iotop'
-GEMS='rake'
+PKGS='curl git git-flow nmap nmon tree vagrant vim vim-athena wget sysstat blktrace iotop'
 XPKGS='synergy geany geany-plugins pidgin pidgin-sipe conky'
 
 # Install dotfiles
@@ -26,8 +25,6 @@ RUNLEVEL=1
 /usr/bin/apt-get update;
 /usr/bin/apt-get -qq -y install $PKGS
 unset RUNLEVEL
-
-/usr/bin/gem install $GEMS
 
 # Install graphical apps if xorg is installed
 if /usr/bin/dpkg -l xorg >/dev/null ; then

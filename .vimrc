@@ -59,7 +59,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colors darkblue
 
 " Always display a status line at the bottom of the window
 set laststatus=2
