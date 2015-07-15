@@ -2,7 +2,7 @@
 
 # packages
 PKGS='curl git git-flow nmap nmon tree vagrant vim vim-athena wget sysstat blktrace iotop'
-XPKGS='synergy geany geany-plugins pidgin pidgin-sipe conky'
+# XPKGS='synergy geany geany-plugins pidgin pidgin-sipe conky'
 
 # Install dotfiles
 for F in .bashrc .profile .inputrc .vimrc .dircolors ; do
